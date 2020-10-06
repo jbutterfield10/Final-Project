@@ -1,0 +1,679 @@
+html {
+    font-size: 16pt;
+    font-family: Montserrat;
+}
+
+body {
+    margin: 0;
+    
+}
+
+
+/*---------------------------------------------------------------------*/
+/*---nav bar---*/
+
+#menu {
+    display: none;
+    position: fixed;
+    top: 2vh;
+    right: 2vh;
+    z-index: 5;
+}
+
+header {
+     background-color: black;
+    font-size: 1.75rem;
+    font-family: 'Esteban', serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 5;
+    
+}
+
+nav {
+    margin-right: 3vw;
+}
+
+nav a {
+    padding-left: .5em;
+    padding-right: .5em;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+	vertical-align: middle;
+}
+
+nav a:hover {
+    color: #ff4200;
+    text-shadow: 0 0 9px #ff4200;
+    box-shadow: 0px 0px 30px 0px #1136ff;
+    border-radius: 2em;
+}
+
+
+
+#navlogo {
+    position: fixed;
+    top: 5vh;
+    transform: translateY(-50%);
+    left: 0;
+    margin-left: 3vw;
+    width: 30%;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+#logo-hover {
+    position: fixed;
+    top: 5vh;
+    transform: translateY(-50%);
+    left: 0;
+    margin-left: 3vw;
+    width: 30%;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+#navlogo:hover {
+    color: #ff4200;
+    text-shadow: 0 0 9px #1136ff;
+    box-shadow: 0px 0px 30px 0px #1136ff;
+    border-radius: 2em;
+}
+
+.remove {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*---article css---*/
+
+article {
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    box-sizing: border-box;
+    
+    left: -100vw;
+    transition: left 0.5s ease-in-out;
+    z-index: 2;
+}
+
+article:target {
+    left: 0;
+}
+
+article:target ~ #home {
+    left: -100vw;
+}
+
+article::before {
+    z-index: -5;
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    
+    
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*-----HOME PAGE-----*/
+
+#home::before {
+    background-image: white;
+}
+
+#home {
+    left: 0;
+}
+
+.mobile-home-container {
+    display: none;
+}
+
+.home-container {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#hi {
+    width: 25vw;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.hi-container > h2 {
+    text-decoration: none;
+    font-size: 1.25rem;
+    width: 25vw;
+    text-align: center;
+}
+
+#jesse {
+    width: 25vw;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.jesse-container > h2 {
+    text-decoration: none;
+    font-size: 1.25rem;
+    width: 25vw;
+    text-align: center;
+}
+
+#home a {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 25vw;
+    background-color: #ff4200;
+    color: black;
+    text-decoration: none;
+    border-radius: 2em;
+    
+}
+
+#home a:hover {
+    text-shadow: 0 0 9px white;
+    box-shadow: 0px 0px 30px 0px #1136ff;
+    color: white;
+}
+
+
+
+.giphy {
+    display: none;
+}
+
+.giphy img {
+    width: 2em;
+    width: 4em;
+    padding: 0;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    margin-left: auto;
+}
+
+.internet {
+    display: none;
+}
+
+.internet img {
+    width: 2em;
+    width: 4em;
+    padding: 0;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    margin-left: auto;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/*-----------------------------------------------------------------------*/
+/*The CUBE*/
+
+.photobox {
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    position: absolute;
+    top: 25vh;
+
+}
+
+.photobox img {
+    width: 12em;
+}
+
+
+article:target + img {
+    animation-name: animate-img;
+    animation-duration: 1.5s;
+}
+
+.stage {
+    perspective-origin: center;
+    
+}
+
+.stage .cube {
+    width: 12em;
+    height: 12em;
+    transform-style: preserve-3d;
+    
+    position: relative;
+    animation: cube-rotation 15s infinite linear;
+    
+    animation-play-state: paused;
+}
+
+.cube > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.cube:hover {
+    animation-play-state: running !important;
+}
+
+/*
+
+
+All the cube faces start out stacked on top of each other in the same 2D space.
+For the front face (the face that initially faces the viewer) we just need to
+move it forward (toward the viewer) half of size of the cube.
+*/
+.stage .front {
+    transform: translateZ(6em);
+}
+
+
+/*
+For the back face, we rotate it 180 degrees (so the "out" side is facing away from us initially),
+then move it in the z-axis. Note that the order of these operations matches the order
+you put them in the CSS. Since we have rotated the back face 180 degrees, the Z-axis is now also
+reversed! So positive translateZ for this back face is moving it further behind the screen,
+and negative would be toward the viewer! How crazy is that?!
+By moving it half the size of the cube away, combined with moving the front half the size towards us,
+we make a complete cube (front and back so far).
+*/
+.stage .back {
+    transform: rotateY(180deg) translateZ(6em);
+}
+
+
+/*
+The top rotates around the X-axis, 
+so its translateZ is now up! 
+The rotation is positive so that the top faces up.
+*/
+.stage .top {
+    transform: rotateX(90deg) translateZ(6em);
+}
+
+
+/*
+The bottom rotates around the X-axis in the negative direction, 
+so its translateZ is now down!
+*/
+.stage .bottom {
+    transform: rotateX(-90deg) translateZ(6rem);
+}
+
+
+/*
+Rotate the left side so that it faces out to the left, 
+so its translateZ is now pointing left.
+*/
+.stage .left {
+    transform: rotateY(-90deg) translateZ(6em);
+}
+
+
+
+/*
+Rotate the right side so that it faces out to the right, 
+so its translateZ is now pointing right.
+*/
+.stage .right {
+    transform: rotateY(90deg) translateZ(6em);
+}
+
+@keyframes cube-rotation {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    100% { transform: rotateX(360deg) rotateY(1080deg) rotateZ(360deg);}
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*---PORTFOLIO PAGE---*/
+
+#portfolio {
+    margin-top: 10vh;
+}
+
+#portfolio::before {
+    background-image: radial-gradient(#1136ff, white);
+    opacity: 0.2;
+}
+
+.port-header {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.port-header > h1 {
+ text-decoration: underline;
+ margin-top: 2vh;
+ margin-bottom: 0;
+    
+}
+
+.port-header > h2 {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.teaser {
+    position: Absolute;
+    top: 60vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    display: flex;
+    width: 80%;
+    height: 50%;
+    box-shadow: 0px 0px 30px 0px black;
+}
+
+
+
+.teaser-div {
+    padding: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.teaser-div > a {
+    z-index: 1;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.elite > img {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.git > img {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.teaser-div::after {
+    border-right: 1px solid #ff4200;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0;
+    top: 15%;
+}
+
+.teaser-div:last-child::after {
+    border-right: 0;
+}
+
+.teaser-div > a > img {
+    width: 100%;
+}
+
+.teaser-div > a:hover {
+    text-shadow: 0 0 9px white;
+    box-shadow: 0px 0px 30px 0px #1136ff;
+    border-radius: 2em;
+}
+
+#mindtricks {
+    display: none;
+}
+
+
+/*---------------------------------------------------------------------*/
+/*-----ABOUT PAGE---------*/
+
+#about::before {
+    background-image: url("../images/about.jpg");
+    opacity: 0.2;
+}
+
+.about {
+    margin-top: 12vh;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .75em;
+}
+
+.about > h1 {
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.about-photos {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.about-photos > img {
+    width: 15%;
+    padding: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.bonus {
+    border: 5px solid #ff4200;
+    
+}
+
+.about-photos > img:nth-child(2) {
+   border: 5px solid #1136ff;
+   
+}
+
+.about-photos > img:nth-child(2):hover {
+    background-color: #1136ff;
+    opacity: 1;
+    box-shadow: 0px 0px 30px 0px #ff4200;
+}
+
+.bonus:hover {
+    background-color: #ff4200;
+    opacity: 1;
+    box-shadow: 0px 0px 30px 0px #1136ff;
+}
+
+.about-photos > img {
+    transition: transform .25s;
+}
+
+.about-photos > img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*-----CONTACT PAGE---------*/
+
+#contact::before {
+    background-image: url("../images/space3.jpg");
+    opacity: .5;
+}
+
+.contact {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.contact > h1 {
+    text-decoration: underline;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.contact > a {
+    text-decoration: none;
+    font-size: 1.75rem;
+    text-shadow: 0 0 9px white;
+    color: #1136ff;
+    border-radius: 2em;
+    width: 25vw;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.contact > a:hover {
+    text-shadow: 0 0 9px white;
+    box-shadow: 0px 0px 30px 0px #1136ff;
+    color: #ff4200;
+}
+
+.contact > a i {
+    padding-right: .5em;
+}
+
+#contact a i {
+    transition: transform .25s;
+}
+
+#contact a:hover i {
+    transform: scale(1.2, 1.2);
+}
+
+
+
+/*---------------------------------------------------------------------*/
+/*-----BLOG PAGE---------*/
+
+#blog::before {
+    background-image: url("../images/blog.jpg");
+    opacity: .5;
+}
+
+
+.blog-header {
+    margin-top: 12vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+}
+
+.blog-header > h1 {
+    text-decoration: underline;
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-shadow: .5px .5px 0px white;
+}
+
+.blog-header > p {
+    margin-top: 0.5em;
+    /*text-shadow: .5px .5px 0px white;*/
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  height: 55vh;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+}
+
+.grid-container > div > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+	text-align: center;
+	font-size: small;
+	position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+

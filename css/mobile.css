@@ -1,0 +1,227 @@
+html {
+    font-size: 26pt;
+}
+
+/*-----navbar-----*/
+
+#menu {
+    display: block;
+    top: 2vh;
+    right: 2vh;
+    font-size: 3vh;
+    z-index: 10;
+    color: white;
+}
+
+.menu-show {
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    top: 5vh;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 10ch;
+    background-color: #1136ff;
+    margin-top: 5vh;
+    margin-right: 1vh;
+    padding-bottom: 1vh;
+}
+
+.navbar {
+    display: none;
+}
+
+#navlogo {
+    width: 80%;
+}
+
+
+
+/*-----HOME PAGE-----*/
+
+.home-container {
+    display: none;
+}
+
+.mobile-home-container {
+    display: flex;
+    margin-top: 10vh;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mobile-home-container > h1 {
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+.mobile-home-container > h2 {
+    font-size: 1em;
+    width: 90vw;
+}
+
+#home a {
+    bottom: 10%;
+    width: 50vw;
+    box-shadow: 0px 0px 30px 0px black;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/*-----THE CUBE-----*/
+
+.photobox {
+    top: 40vh;
+}
+
+.stage .cube {
+    animation: cube-rotation 30s infinite linear;
+    animation-play-state: running;
+    animation-timing-function: ease-in;
+}
+
+
+
+
+
+
+
+/*-----PORTFOLIO PAGE-----*/
+
+.port-header > h1 {
+    margin-bottom: 1vh;
+}
+
+.port-header > h2 {
+    width: 90vw;
+}
+
+
+/*The entire box is slightly off center*/
+.teaser {
+    display: flex;
+    flex-direction: column;
+    top: 55vh;
+    width: 90%;
+    height: 60%;
+}
+
+
+.teaser-div {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.teaser-div:after {
+    transform: rotateX(90deg);
+}
+
+.teaser-div > a > img {
+    width: 70%;
+}
+
+.teaser-div > a {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.elite {
+    padding: 1em 0 1em 0 !important; 
+    text-shadow: 0 0 9px white;
+    box-shadow: 
+        inset 0px 11px 8px -10px #1136ff,
+        inset 0px -11px 8px -10px #1136ff;
+}
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*-----ABOUT PAGE---------*/
+
+.bonus {
+    display: none;
+}
+
+.about { 
+    font-size: 1em;
+}
+
+.about-photos > img {
+    width: 40%;
+    background-color: #1136ff;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color: #1136ff;}
+  50%  {background-color: #ff4200;}
+  100% {background-color: #1136ff;}
+}
+
+.about-photos > img:nth-child(2) {
+    border: 0;
+    bottom: 2vh;
+    position: relative;
+   
+}
+
+
+/*---------------------------------------------------------------------*/
+/*-----CONTACT PAGE---------*/
+
+.contact > a {
+    font-size: 3em;
+    padding-left: 0;
+    padding-right: 0;
+    width: 70vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#email {
+    animation: email 1.5s alternate infinite ease-in;
+}
+
+@keyframes email {
+  0%   {transform: scale(.8);}
+  100% {transform: scale(1.5);}
+}
+
+
+
+
+/*---------------------------------------------------------------------*/
+/*-----BLOG PAGE---------*/
+
+.grid-container {
+    grid-template-columns: auto auto;
+}
+
+
+
+
+
+
+
+
+
