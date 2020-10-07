@@ -181,9 +181,9 @@ nav {
     margin-right: 0;
 }
 
-#me {
+/* #me {
     width: 3em;
-}
+} */
 
 @keyframes example {
   0%   {background-color: #1136ff;}
