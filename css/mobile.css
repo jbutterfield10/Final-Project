@@ -129,7 +129,7 @@ nav {
 }
 
 .teaser-div > a > img {
-    width: 70%;
+    width: 60%;
 }
 
 .teaser-div > a {
@@ -139,7 +139,7 @@ nav {
 }
 
 .elite {
-    padding: 1em 0 1em 0 !important; 
+    /* padding: 1em 0 1em 0 !important;  */
     text-shadow: 0 0 9px white;
     box-shadow: 
         inset 0px 11px 8px -10px #1136ff,
@@ -233,8 +233,12 @@ nav {
 
 
 
+/*---------------------------------------------------------------------*/
+/*-----FOOTER---------*/
 
-
+footer {
+    bottom: 7em;
+}
 
 
 

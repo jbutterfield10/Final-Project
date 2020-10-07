@@ -421,7 +421,7 @@ so its translateZ is now pointing right.
 
 .teaser {
     position: Absolute;
-    top: 60vh;
+    top: 55vh;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -664,10 +664,11 @@ so its translateZ is now pointing right.
 
 
 footer {
+    width: 90vw;
 	text-align: center;
-	font-size: small;
+	font-size: 1em;
 	position: absolute;
-    bottom: 15vh;
+    bottom: 1em;
     left: 50%;
     transform: translateX(-50%);
 }
