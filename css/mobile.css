@@ -114,7 +114,7 @@ nav {
     flex-direction: column;
     top: 50vh;
     width: 90%;
-    height: 57%;
+    height: 55%;
 }
 
 
@@ -146,6 +146,10 @@ nav {
         inset 0px -11px 8px -10px #1136ff;
 }
 
+.git {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
 
 
@@ -160,6 +164,10 @@ nav {
     font-size: 1em;
 }
 
+.about > h1 {
+    margin-bottom: 0.5rem;
+}
+
 .about-photos > img {
     width: 25%;
     padding: 1em;
@@ -167,6 +175,9 @@ nav {
     animation-name: example;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+    margin-left: 0;
+    margin-right: 0;
+
 }
 
 @keyframes example {
@@ -217,6 +228,7 @@ nav {
 
 .grid-container {
     grid-template-columns: auto auto;
+    height: 50vh
 }
 
 
