@@ -513,12 +513,12 @@ so its translateZ is now pointing right.
 .about-photos {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .about-photos > img {
     width: 15%;
-    padding: 2em;
+    padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
 }

@@ -173,15 +173,16 @@ nav {
 }
 
 .about-photos > img {
-    width: 4em;
-    padding: 1em;
     background-color: #1136ff;
     animation-name: example;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     margin-left: 0;
     margin-right: 0;
+}
 
+#me {
+    width: 3em;
 }
 
 @keyframes example {
@@ -241,7 +242,7 @@ nav {
 /*-----FOOTER---------*/
 
 footer {
-    bottom: 2.5em;
+    bottom: 1.5em;
 }
 
 
