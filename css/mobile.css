@@ -173,7 +173,7 @@ nav {
 }
 
 .about-photos > img {
-    /* width: 25%; */
+    width: 4em;
     padding: 1em;
     background-color: #1136ff;
     animation-name: example;
@@ -241,7 +241,7 @@ nav {
 /*-----FOOTER---------*/
 
 footer {
-    bottom: 3.5em;
+    bottom: 2.5em;
 }
 
 
