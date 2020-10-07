@@ -108,6 +108,10 @@ nav {
     font-size: 2rem;
 }
 
+.port-header > h2 {
+    font-size: 1rem;
+}
+
 
 .teaser {
     display: flex;
@@ -169,7 +173,7 @@ nav {
 }
 
 .about-photos > img {
-    width: 25%;
+    /* width: 25%; */
     padding: 1em;
     background-color: #1136ff;
     animation-name: example;
