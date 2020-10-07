@@ -667,7 +667,7 @@ footer {
 	text-align: center;
 	font-size: small;
 	position: absolute;
-    bottom: 1vh;
+    bottom: 13vh;
     left: 50%;
     transform: translateX(-50%);
 }

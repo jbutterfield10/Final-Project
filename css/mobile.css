@@ -8,7 +8,7 @@ html {
     display: block;
     top: 2vh;
     right: 2vh;
-    font-size: 3vh;
+    font-size: 6vh;
     z-index: 10;
     color: white;
 }
@@ -68,7 +68,7 @@ nav {
 }
 
 #home a {
-    bottom: 20%;
+    bottom: 21%;
     width: 50vw;
     box-shadow: 0px 0px 30px 0px black;
     font-size: 1.5em;
@@ -103,21 +103,18 @@ nav {
 /*-----PORTFOLIO PAGE-----*/
 
 .port-header > h1 {
+    margin-top: 1vh;
     margin-bottom: 1vh;
-}
-
-.port-header > h2 {
-    width: 90vw;
+    font-size: 2rem;
 }
 
 
-/*The entire box is slightly off center*/
 .teaser {
     display: flex;
     flex-direction: column;
-    top: 55vh;
+    top: 50vh;
     width: 90%;
-    height: 60%;
+    height: 57%;
 }
 
 
@@ -164,7 +161,8 @@ nav {
 }
 
 .about-photos > img {
-    width: 40%;
+    width: 25%;
+    padding: 1em;
     background-color: #1136ff;
     animation-name: example;
     animation-duration: 5s;
@@ -212,6 +210,10 @@ nav {
 
 /*---------------------------------------------------------------------*/
 /*-----BLOG PAGE---------*/
+
+#blog {
+    font-size: 20pt;
+}
 
 .grid-container {
     grid-template-columns: auto auto;
