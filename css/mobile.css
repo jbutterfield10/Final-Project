@@ -173,6 +173,7 @@ nav {
 }
 
 .about-photos > img {
+    width: 5%;
     background-color: #1136ff;
     animation-name: example;
     animation-duration: 5s;
