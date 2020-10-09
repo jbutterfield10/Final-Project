@@ -214,13 +214,24 @@ nav {
     transform: translateX(-50%);
 }
 
-#email {
+#email, #linkedin-logo {
     animation: email 1.5s alternate infinite ease-in;
 }
 
 @keyframes email {
   0%   {transform: scale(.8);}
-  100% {transform: scale(1.5);}
+  100% {transform: scale(1.4);}
+}
+
+.linked {
+    top: 155% !important;
+    left: 78% !important; 
+}
+
+#linkedin-logo {
+    position: absolute;
+    top: 0%;
+    left: -15%;
 }
 
 
