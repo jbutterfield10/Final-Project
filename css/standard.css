@@ -450,8 +450,8 @@ so its translateZ is now pointing right.
 }
 
 .elite > img {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 2.75em;
+    padding-bottom: 2.75em;
 }
 
 .git > img {
@@ -467,6 +467,10 @@ so its translateZ is now pointing right.
     height: 70%;
     left: 0;
     top: 15%;
+}
+
+.teaser-div:nth-child(2)::after {
+    border-right: 0;
 }
 
 .teaser-div:last-child::after {
@@ -686,7 +690,9 @@ footer {
 }
 
 
-
+#hide-me {
+    display: none;
+}
 
 
 
